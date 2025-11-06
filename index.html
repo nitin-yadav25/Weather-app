@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Smart Weather — Modular</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <main class="app">
+    <header class="top">
+      <h1>Smart Weather</h1>
+      <div class="search">
+        <input id="cityInput" placeholder="Search city (e.g. Delhi)" />
+        <button id="searchBtn" title="Search">🔍</button>
+      </div>
+      <small class="hint">Or allow location access to auto-detect</small>
+    </header>
+
+    <section class="content">
+      <article id="currentCard" class="card hidden">
+        <div class="left">
+          <img id="weatherIcon" alt="icon" />
+        </div>
+        <div class="right">
+          <h2 id="cityName">City</h2>
+          <div id="temp" class="temp"></div>
+          <div id="description" class="desc"></div>
+          <div class="meta">
+            <span id="humidity"></span> • <span id="wind"></span>
+          </div>
+        </div>
+      </article>
+
+      <section id="forecast" class="forecast"></section>
+    </section>
+
+    <footer class="footer">
+      <small>Data from OpenWeatherMap</small>
+    </footer>
+  </main>
+
+  <script type="module" src="js/main.js"></script>
+</body>
+</html>
